@@ -5,7 +5,7 @@
 학습한 내용
 ===============================
 
-* Googlle Play Console을 설정하고 Gamebase Console에 결제정보를 추가하는 방법에 대해 알아보았습니다.
+* Google Play Console을 설정하고 Gamebase Console에 결제정보를 추가하는 방법에 대해 알아보았습니다.
 
 
 다음 단계

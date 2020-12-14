@@ -1,0 +1,25 @@
+******
+개요
+******
+
+Gamebase SDK를 이용해서 구글 결제를 진행합니다.
+
+학습할 내용
+===============================
+
+* Google Play Console 설정
+* Gamebase Console 설정
+* Gamebase SDK 설치
+* Unity에서 결제하기
+
+준비물
+===============================
+
+* `Gamebase 설치 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.install-with-setting-tool/>`_ 토픽 학습
+* `Gamebase : Unity에서 Guest인증 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.guest-auth-on-unity/>`_ 토픽 학습
+* `Gamebase : Google 인증을 위한 Google Play 및 TOAST Console 설정 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.google-setting/>`_ 토픽 학습
+
+소스 코드
+===============================
+
+* **Google 인증을 위한 Google Play 및 TOAST Console 설정** 토픽에 이어 코딩을 진행합니다.

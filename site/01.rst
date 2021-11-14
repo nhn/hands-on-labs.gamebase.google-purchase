@@ -1,25 +1,25 @@
-******
+****
 개요
-******
+****
 
-Gamebase SDK를 이용해서 구글 결제를 진행합니다.
+게임사는 이미 만들어진 게임을 여러 개의 스토어에 출시하면 적은 노력으로 수익을 극대화할 수 있습니다.
+Gamebase를 이용하면 손쉽게 여러 개의 스토어와 연동할 수 있으므로, 주요 스토어별 결제 연동 스펙을 완벽하게 학습하지 않아도 됩니다.
 
 학습할 내용
 ===============================
 
-* Google Play Console 설정
-* Gamebase Console 설정
-* Gamebase SDK 설치
-* Unity에서 결제하기
+Android 플랫폼에서 Google 결제를 진행하기 위해 필요한 설정과 Gamebase API들을 알아봅니다.
 
 준비물
 ===============================
 
-* `Gamebase 설치 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.install-with-setting-tool/>`_ 토픽 학습
-* `Gamebase : Unity에서 Guest인증 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.guest-auth-on-unity/>`_ 토픽 학습
-* `Gamebase : Google 인증을 위한 Google Play 및 TOAST Console 설정 <https://forward.nhn.com/2020/seoul/hands-on-labs/gamebase.google-setting/>`_ 토픽 학습
+* 선행 학습
+
+  * `Gamebase 설치 </2021/hands-on-labs/gamebase.install-with-setting-tool/>`_
+  * `Android Guest 인증 </2021/hands-on-labs/gamebase.guest-auth-on-unity/>`_
+  * `Google 인증을 위한 Google Play 및 NHN Cloud Console 설정 </2021/hands-on-labs/gamebase.google-setting/>`_
 
 소스 코드
 ===============================
 
-* **Google 인증을 위한 Google Play 및 TOAST Console 설정** 토픽에 이어 코딩을 진행합니다.
+**Google 인증을 위한 Google Play 및 NHN Cloud Console 설정** 에 이어 코딩을 진행합니다.

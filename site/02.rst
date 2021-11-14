@@ -7,83 +7,126 @@ Google 인증 설정에 이어 결제를 위한 설정을 진행합니다.
 Refresh Token 발급
 =================================================
 
-1. `Google Play Console <https://play.google.com/apps/publish>`_ 로 이동합니다.
-2. 좌측 사이드 메뉴에서 설정 > 개발자 계정 > API 액세스 메뉴를 선택합니다.
-3. **연결된 Google Cloud 프로젝트** 에서 프로젝트 보기 버튼을 클릭합니다.
+1. `Google Play Console <https://play.google.com/apps/publish>`_ 이동
+2. **연결된 Google Cloud 프로젝트** 설정
 
-.. image:: _static/image/google_console_001.png
+  1. **Menu > 설정 > API 액세스**
 
-4. Google Cloud 프로젝트의 좌측 사이드 메뉴에서 사용자 인증 정보 메뉴를 선택 후, OAuth 2.0 클라이언트 ID의 **웹 애플리케이션** 클라이언트 ID를 클릭합니다.
+    .. image:: _static/image/google_console_api_access_menu.png
 
-.. image:: _static/image/google_console_004.png
+  2. Click **연결할 프로젝트 선택**
 
-5. 승인된 리디렉션 URI에 **https://developers.google.com/oauthplayground/** 를 추가 후, 저장합니다.
+    .. image:: _static/image/google_console_api_access_get_permission.png
 
-.. image:: _static/image/google_console_005.png
+  3. Click **동의**
 
-6. `OAuth 2.0 Playground <https://developers.google.com/oauthplayground/>`_ 를 오픈합니다. 
-7. OAuth 2.0 Configuration 버튼을 클릭 후, **웹 애플리케이션** 클라이언트 ID에 등록된 **Client ID** 와 **Client Secret** 을 입력합니다.
-8. Step1의 입력 창에 **https://www.googleapis.com/auth/androidpublisher** 입력하고, Authorize APIs 버튼을 클릭하여 Authorization code 코드를 발급받습니다.
+    .. image:: _static/image/google_console_api_access_terms.png
+  
+  4. 기존 프로젝트 연결: 활성화
+  5. Google Cloud 프로젝트: HandsOnLab
+  6. Click **프로젝트 연결**
 
-.. image:: _static/image/google_console_007.png
+    .. image:: _static/image/google_console_api_access_connect_exist_project.png
 
-9. Step2 탭을 열고, Exchange authorization code for tokens 버튼을 클릭하여 **Refresh Token** 을 발급받습니다. (Gamebase Console에서 스토어 등록 시 사용됩니다.)
+3. **승인된 리디렉션 URI** 설정
 
-.. image:: _static/image/google_console_008.png
+  1. **연결된 Google Cloud 프로젝트**
+  2. Click **프로젝트 보기**
+
+    .. image:: _static/image/google_console_view_project.png
+
+  3. **API 및 서비스 > 사용자 인증 정보**
+
+    .. image:: _static/image/google_cloud_menu_auth_info.png
+
+  4. Click **웹 클라이언트**
+
+    .. image:: _static/image/google_cloud_auth_info_web_client.png
+
+  5. Click **URI 추가**
+  6. **https://developers.google.com/oauthplayground** 입력
+  7. Click **저장**
+
+    .. image:: _static/image/google_cloud_auth_info_add_uri.png
+
+4. Refresh Token
+
+  1. `OAuth 2.0 Playground <https://developers.google.com/oauthplayground/>`_ 이동
+  2. Click **Settings**
+  3. OAuth 2.0 configuration 설정
+  
+    1. Use your own OAuth credentials: 활성화
+    2. OAuth Client ID: 웹 애플리케이션 클라이언트 ID
+    3. OAuth Client secret: 웹 애플리케이션 클라이언트 보안 비밀번호
+    4. **https://www.googleapis.com/auth/androidpublisher** 입력
+  
+  4. Click **Authorize APIs**
+
+    .. image:: _static/image/google_playground_step1.png
+
+  5. Click **Exchange authorization code for tokens**
+  6. **Refresh Token** 확인
+
+    .. image:: _static/image/google_playground_step2.png
+
+  .. tip::
+    * **Refresh Token** 은 다음 장 **NHN Cloud Console 설정** 에서 사용됩니다.
 
 라이선스
 ===============================
 
-1. `Google Play Console <https://play.google.com/apps/publish>`_ 로 이동합니다.
-2. 좌측 사이드 메뉴에서 모든 앱 메뉴를 선택 후, 앱 목록에서 내가 만든 앱을 선택합니다.
-3. 좌측 사이드 메뉴에서 수익 창출 > 수익 창출 설정 메뉴를 선택합니다.
-4. **라이선스** 를 확인합니다. (Gamebase Console에서 스토어 등록 시 사용됩니다.)
+1. `Google Play Console <https://play.google.com/apps/publish>`_ 이동
+2. **Menu > 모든 앱**
+3. Click **HandsOnLab**
 
-.. image:: _static/image/google_console_009.png
+  .. image:: _static/image/google_console_license_my_app.png
 
-Google Play Android Developer API
-=====================================
+4. **Menu > 재무 보고서 > 수익 창출 설정**
+5. 라이선스 확인
 
-1. Google Play Console의 좌측 사이드 메뉴에서 성장 > Play 게임 서비스 > 설정 및 관리 > 설정 메뉴 선택 후, Google Cloud Platform에서 보기 버튼을 클릭합니다.
+  .. image:: _static/image/google_console_license.png
 
-.. image:: _static/image/google_console_012.png
-    
-2. Google Cloud 프로젝트에서 + API 서비스 사용 설정 버튼을 클릭합니다.
-
-.. image:: _static/image/google_console_002.png
-
-5. **Google Play Android Developer API** 를 검색하여 등록합니다.
-
-.. image:: _static/image/google_console_003.png
+  .. tip::
+    * **Refresh Token** 은 다음 장 **NHN Cloud Console 설정** 에서 사용됩니다.
 
 인앱 상품 만들기
 ===============================
 
 .. tip:: 
-    - 앱을 출시하지 않으면 인앱 상품 등록이 되지 않습니다.
-    - 앱 출시 후, 검토 기간은 1일 정도 소요되며, 이 기간동안 인앱 상품 등록은 되지만 결제는 진행되지 않습니다.
-    - 앱 출시가 안 된 상태라면 `버전 준비 및 출시 가이드 <https://play.google.com/apps/publish>`_ 를 참고하여 앱을 출시하십시오.
+  * Google Payments 판매자 계정을 설정하지 않으면 상품 등록이 되지 않습니다.
+  * 앱을 출시하지 않으면 인앱 상품 등록이 되지 않습니다.
+    
+    * 앱 출시 후, 검토 기간은 1일 정도 소요되며, 이 기간동안 인앱 상품 등록은 되지만 결제는 진행되지 않습니다.
+    * 앱 출시가 안 된 상태라면 `버전 준비 및 출시 가이드 <https://play.google.com/apps/publish>`_ 를 참고하여 앱을 출시하십시오.
 
-1. 좌측 사이드 메뉴에서 수익 창출 > 제품 > 인앱 상품 메뉴를 선택 후, 상품 만들기 버튼을 클릭합니다.
+1. **Menu > 수익 창출 > 제품 > 인앱 상품**
 
-.. image:: _static/image/google_console_010.png
+  .. image:: _static/image/google_console_menu_inapp_product.png
 
-2. 인앱 상품의 정보를 기입 후, 저장 버튼을 클릭합니다.
+2. Click **상품 만들기**
 
-- 제품 ID : 제품의 ID입니다. (Gamebase Console에서 상품 등록 시 사용됩니다.)
-- 이름 : 상품 구매 시 구글 결제 창에 노출되는 상품의 이름입니다.
-- 설명 : 상품의 설명입니다.
-- 가격 : 가격 수정 버튼을 눌러 가격을 적용합니다.
+  .. image:: _static/image/google_console_create_product.png
 
-.. image:: _static/image/google_console_011.png
+3. 인앱 상품 정보 입력
 
-3. 상품이 등록되었는지 확인합니다.
+  * 제품 ID : google_play_console_product_001 (NHN Cloud Console에서 상품 등록 시 사용)
+  * 이름 : GOOGLE_PLAY_CONSOLE_PRODUCT_001
+  * 설명 : Google Play Cosole에 등록된 001 상품입니다.
+  * 가격 : 1,000
+
+4. Click **저장**
+5. Click **활성화**
+
+.. image:: _static/image/google_console_create_product_add_info.png
 
 라이선스 테스터 등록
 ===============================
 
-1. `Google Play Console <https://play.google.com/apps/publish>`_ 로 이동합니다.
-2. 좌측 사이드 메뉴에서 설정 > 라이선스 테스트 메뉴를 선택합니다.
-3. 라이선스 테스터에 Google 계정과 연결되어 있는 이메일 주소를 추가합니다. (개발자 본인의 계정은 항상 라이선스가 부여된 테스터로 간주됩니다.)
+1. `Google Play Console <https://play.google.com/apps/publish>`_ 이동
+2. **Menu 설정 > 라이선스 테스트**
 
-.. image:: _static/image/google_console_013.png
+  .. image:: _static/image/google_console_menu_license_test.png
+
+3. 라이선스 테스터 추가: Google 계정과 연결되어 있는 이메일 주소 추가(개발자 본인의 계정은 항상 라이선스가 부여된 테스터로 간주됩니다.)
+
+  .. image:: _static/image/google_console_license_test.png

@@ -5,7 +5,7 @@ Gamebase : Google Purchase
 * 카테고리: API
 * 레벨: 초급
 * 시간: 30분
-* 업데이트: 2020.12.14.
+* 업데이트: 2021.11.14.
 
 .. toctree::
    :maxdepth: 1
@@ -15,5 +15,4 @@ Gamebase : Google Purchase
    02
    03
    04
-   05
    wrap-up

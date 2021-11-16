@@ -1,5 +1,5 @@
 **********************
-Unity에서 결제하기
+Gamebase Code
 **********************
 
 UI 추가
@@ -14,42 +14,51 @@ UI 추가
 
   .. image:: _static/image/unity_inspector.png
 
-코드 구현
+RequestItemListPurchasable
 ===============================
 
-Assets/TOAST/Codelab/Gamebase/Scripts/HandsOnLab/UserImplementation.cs 파일에 아래 코드 추가
+1. Assets/TOAST/Codelab/Gamebase/Scripts/HandsOnLab/UserImplementation.cs 파일 열기
+2. RequestItemListPurchasable() 메서드 추가
 
 .. code-block:: C#
 
-    public static void RequestItemListPurchasable()
-    {
-        Gamebase.Purchase.RequestItemListPurchasable((purchasableItemList, error) =>
-        {
-            if (Gamebase.IsSuccess(error) == true)
-            {
-                SampleLogger.Log("RequestItemListPurchasable succeeded.");
+  public static void RequestItemListPurchasable()
+  {
+      Gamebase.Purchase.RequestItemListPurchasable((purchasableItemList, error) =>
+      {
+          if (Gamebase.IsSuccess(error) == true)
+          {
+              SampleLogger.Log("RequestItemListPurchasable succeeded.");
 
-                foreach (GamebaseResponse.Purchase.PurchasableItem purchasableItem in purchasableItemList)
-                {
-                    var message = new StringBuilder();
-                    message.AppendLine(string.Format("gamebaseProductId:{0}", purchasableItem.gamebaseProductId));
-                    message.AppendLine(string.Format("itemSeq:{0}", purchasableItem.itemSeq));
-                    message.AppendLine(string.Format("price:{0}", purchasableItem.price));
-                    message.AppendLine(string.Format("currency:{0}", purchasableItem.currency));
-                    message.AppendLine(string.Format("itemName:{0}", purchasableItem.itemName));
-                    message.AppendLine(string.Format("marketItemId:{0}", purchasableItem.marketItemId));
-                    message.AppendLine(string.Format("productType:{0}", purchasableItem.productType));
-                    message.AppendLine(string.Format("localizedPrice:{0}", purchasableItem.localizedPrice));
-                    message.AppendLine(string.Format("isActive:{0}", purchasableItem.isActive));
-                    Debug.Log(message);
-                }
-            }
-            else
-            {
-                SampleLogger.Log(string.Format("RequestItemListPurchasable failed. error is {0}", error));
-            }
-        });
-    }
+              foreach (GamebaseResponse.Purchase.PurchasableItem purchasableItem in purchasableItemList)
+              {
+                  var message = new StringBuilder();
+                  message.AppendLine(string.Format("gamebaseProductId:{0}", purchasableItem.gamebaseProductId));
+                  message.AppendLine(string.Format("itemSeq:{0}", purchasableItem.itemSeq));
+                  message.AppendLine(string.Format("price:{0}", purchasableItem.price));
+                  message.AppendLine(string.Format("currency:{0}", purchasableItem.currency));
+                  message.AppendLine(string.Format("itemName:{0}", purchasableItem.itemName));
+                  message.AppendLine(string.Format("marketItemId:{0}", purchasableItem.marketItemId));
+                  message.AppendLine(string.Format("productType:{0}", purchasableItem.productType));
+                  message.AppendLine(string.Format("localizedPrice:{0}", purchasableItem.localizedPrice));
+                  message.AppendLine(string.Format("isActive:{0}", purchasableItem.isActive));
+                  Debug.Log(message);
+              }
+          }
+          else
+          {
+              SampleLogger.Log(string.Format("RequestItemListPurchasable failed. error is {0}", error));
+          }
+      });
+  }
+
+
+RequestPurchase
+===============================
+
+1. RequestPurchase() 메서드 추가
+
+.. code-block:: C#
 
     public static void RequestPurchase()
     {
@@ -95,7 +104,7 @@ Build & Run
   .. image:: _static/image/unity_build_and_run.png
 
 3. APK 파일 이름: gamebase-handsonlab.apk
-4. 디바이스에서 실행 확인
+4. 디바이스에서 실행
 5. Click **Initialize**
 6. Click **Login**
 7. Click **RequestItemListPurchasable**

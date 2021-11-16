@@ -8,7 +8,7 @@ NHN Cloud Console에 Google Play 스토어 정보와 상품을 등록하는 방�
 ===============================
 
 1. `NHN Cloud Console <https://console.toast.com/>`_ 이동
-2. 프로젝트선택
+2. 프로젝트 선택
 
   .. image:: _static/image/toast_console_select_project.png
 
@@ -16,11 +16,11 @@ NHN Cloud Console에 Google Play 스토어 정보와 상품을 등록하는 방�
 
   .. image:: _static/image/toast_console_menu_iap.png
 
-4. 통화 기준 선택: KRW
+4. 통화 기준: KRW
 
   .. image:: _static/image/toast_console_select_currency.png
 
-5. **스토어** 탭 선택
+5. Select **스토어**
 6. Click **등록**
 
   .. image:: _static/image/toast_console_add_store.png
@@ -56,7 +56,7 @@ NHN Cloud Console에 Google Play 스토어 정보와 상품을 등록하는 방�
 상품 등록
 ===============================
 
-1. **상품** 탭 선택
+1. Select **상품**
 2. Click **등록 버튼**
 
   .. image:: _static/image/toast_console_create_product.png

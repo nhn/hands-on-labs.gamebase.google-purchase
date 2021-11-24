@@ -17,7 +17,7 @@ UI 추가
 RequestItemListPurchasable
 ===============================
 
-1. Assets/TOAST/Codelab/Gamebase/Scripts/HandsOnLab/UserImplementation.cs 파일 열기
+1. Assets/NhnCloud/Codelab/Gamebase/Scripts/HandsOnLab/UserImplementation.cs 파일 열기
 2. RequestItemListPurchasable() 메서드 추가
 
 .. code-block:: C#
